@@ -1,0 +1,45 @@
+<!doctype html>
+<html class="no-js" lang="" ng-app="jeopardyApp">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+        <!-- Place favicon.ico in the root directory -->
+
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/main.css">
+        <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+    </head>
+    <body ng-controller="HomeController">
+        <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <!-- Add your site or application content here -->
+        <p>This is a Jeopardy Game powered by your google spreadsheet. A sample document can be found <a href="https://docs.google.com/spreadsheets/d/1lsTQjs15IV40WZno5Wy6JC4Px3uWSVArEQPgEvGTco8/edit?usp=sharing">here</a>.  Your spreadsheet must have the following columns: Category, Points, Question, Answer</p>
+        <p>To get the link go to File > Publish to the web... Then select the settings shown below.</p>
+        <p><img src="img/HowToShare.png"/></p>
+
+        <label>Link:</label>
+        <input type="text" ng-model="googleDriveLink" ng-blur="setLink()" placeholder="Paste the link to the spreadsheet here">
+        <hr>
+        <h3>Data From {{googleDriveLink}}</h3>
+        <hr>
+        <div ng-repeat="q in jeopardyQuestions | orderBy:['category','points']" ng-click="showQuestion(q)">
+            {{q.category}}-{{q.points}}
+        </div>
+
+        <!-- Load JavaScript after HTML -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.3.min.js"><\/script>')</script>
+        <script src="js/vendor/angular.min.js"></script>
+        <script src="js/vendor/lodash.min.js"></script>
+        <script src="js/plugins.js"></script>
+        <script src="js/main.js"></script>
+        <script src="js/DriveRepository.js"></script>
+    </body>
+</html>
