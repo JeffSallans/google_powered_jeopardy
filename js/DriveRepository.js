@@ -12,9 +12,16 @@ var DriveRepository = (function() {
 	};
 
 	//@link {string} - url of published google drive in tab separated variable (TSV) format
-	//@returns {promise} - returns a promise that resolves to an object that contains the data from the link
-	_DriveRepository.prototype.getData = function(link) {
+	//@returns {promise} - returns a promise that resolves to an object that contains the following structure
+	//  @filename {object} - File object with the following structure
+	//	  @name {string} - Name of the file. testDocument.txt it would be testDocument
+	//    @extension {string} - File type. testDocument.txt it would be txt
+	//  @data {object} - data from the document
+	_DriveRepository.prototype.getFile = function(link) {
 		var self = this;
+
+		//If https link is provided strip it out to http to avoid cross site scripting
+		link = link.replace("https", "http");	
 
 		return self.$http.get(link)
 			//Success
@@ -22,7 +29,21 @@ var DriveRepository = (function() {
 
 				console.log("Recieved Data: ", response.data);
 
-				return convertTsvToObject(response.data);
+				//Get file name metadata
+				var filename = getFilenameFromResponse(response);
+
+				//Throw execption if file is not TSV
+				if (filename.extension !== "tsv") {
+					throw {
+						message: "Recieved file is not of type csv",
+						data: filename
+					};
+				};
+
+				return {
+					filename: filename,
+					data: convertTsvToObject(response.data)
+				};
 			},
 			//Fail
 			function(error) {
@@ -68,6 +89,28 @@ var DriveRepository = (function() {
 		})
 
 		return result;
+	};
+
+	//@response {response} - 
+	//@return {object} - The object with the following structure or null if the file doesn't exist
+	//  @name {string} - Name of the file. testDocument.txt it would be testDocument
+	//  @extension {string} - File type. testDocument.txt it would be txt
+	var getFilenameFromResponse = function(response) {
+
+		var headerFileDataString = response.headers("content-disposition");
+		var getFilenameAndExtensionRegex = /filename="([^\.]*)\.(\w+)"/;
+
+		var headerFileData = headerFileDataString.match(getFilenameAndExtensionRegex);
+
+		//If match doesn't exist return null
+		if (!headerFileData || headerFileDataString.length === 0) return null;
+
+		return {
+
+			//Index of 0 is entire match
+			name: headerFileData[1],
+			extension: headerFileData[2]
+		};
 	};
 
 	return _DriveRepository;

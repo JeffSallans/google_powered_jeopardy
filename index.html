@@ -19,18 +19,27 @@
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
-        <!-- Add your site or application content here -->
-        <p>This is a Jeopardy Game powered by your google spreadsheet. A sample document can be found <a href="https://docs.google.com/spreadsheets/d/1lsTQjs15IV40WZno5Wy6JC4Px3uWSVArEQPgEvGTco8/edit?usp=sharing">here</a>.  Your spreadsheet must have the following columns: Category, Points, Question, Answer</p>
-        <p>To get the link go to File > Publish to the web... Then select the settings shown below.</p>
-        <p><img src="img/HowToShare.png"/></p>
-
-        <label>Link:</label>
-        <input type="text" ng-model="googleDriveLink" ng-blur="setLink()" placeholder="Paste the link to the spreadsheet here">
-        <hr>
-        <h3>Data From {{googleDriveLink}}</h3>
-        <hr>
-        <div ng-repeat="q in jeopardyQuestions | orderBy:['category','points']" ng-click="showQuestion(q)">
-            {{q.category}}-{{q.points}}
+        <div class="background"></div>
+        <div class="setup-container" ng-show="fileName === null">
+            <div class="banner instructions">
+                <p>This is a Jeopardy Game powered by your google spreadsheet. A sample document can be found <a href="https://docs.google.com/spreadsheets/d/1lsTQjs15IV40WZno5Wy6JC4Px3uWSVArEQPgEvGTco8/edit?usp=sharing">here</a>.  Your spreadsheet must have the following columns: Category, Points, Question, Answer</p>
+                <p>To get the link go to File > Publish to the web... Then select the settings shown below.</p>
+                <p><img src="img/HowToShare.png"/></p>
+            </div>
+            <div class="banner input">
+                <input type="text" ng-model="googleDriveLink" placeholder="Paste the link to the spreadsheet here">
+                <button ng-click="setLink()">Start Game</button>
+            </div>
+        </div>
+        <div class="game-container" ng-show="fileName !== null">
+            <div class="banner game-title">
+                {{fileName}} Jeopardy
+            </div>
+            <div class="tile-container">
+                <div ng-repeat="q in jeopardyQuestions | orderBy:['category','points']" ng-click="showQuestion(q)">
+                    {{q.category}}-{{q.points}}
+                </div>
+            </div>
         </div>
 
         <!-- Load JavaScript after HTML -->
