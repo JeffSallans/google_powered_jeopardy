@@ -1,6 +1,12 @@
 "use strict";
 angular.module('jeopardyApp', [])
 	.controller('HomeController', ['$scope', '$http', function($scope, $http) {
+
+		//Date for Copyright
+		var date = new Date();
+		$scope.year = date.getFullYear()
+
+		//Google Drive data variables
 		$scope.driveRepo = new DriveRepository($http, _);
 		$scope.fileName = null;
 		$scope.jeopardyQuestions = [];
@@ -13,19 +19,20 @@ angular.module('jeopardyApp', [])
 
 		$scope.setLink = function() {
 
-
+			$scope.errorMessage = null;
 
 			$scope.driveRepo.getFile($scope.googleDriveLink)
 				//Success
 				.then(function(file) {
-					console.log("Google Link Data: ", file.filename.name);
+					console.log("Google Link Data: ", file);
 
 					$scope.fileName = file.filename.name;
 					$scope.jeopardyQuestions = file.data;
 				},
 				//Fail
 				function(error) {
-					alert(error);
+					$scope.errorMessage = error.message;
+					console.error(error);
 				})
 		};
 

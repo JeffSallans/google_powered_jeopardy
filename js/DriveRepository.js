@@ -35,7 +35,7 @@ var DriveRepository = (function() {
 				//Throw execption if file is not TSV
 				if (filename.extension !== "tsv") {
 					throw {
-						message: "Recieved file is not of type csv",
+						message: "File is not in  Tab Separated Variable (TSV) format",
 						data: filename
 					};
 				};
@@ -48,7 +48,10 @@ var DriveRepository = (function() {
 			//Fail
 			function(error) {
 				
-				alert(error);
+				throw {
+					message: "Unable to connect to provided link",
+					error: error
+				};
 			});
 	};
 
