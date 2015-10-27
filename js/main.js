@@ -36,6 +36,22 @@ angular.module('jeopardyApp', [])
 				})
 		};
 
+		//Call the appropriate functions based on the question state
+		//@question {object} - An element from the list of jeopardyQuestions
+		$scope.stepThoughQuestionState = function(question) {
+
+			//Check if selected question has been set
+			if ($scope.selectedJeopardyQuestion !== question) {
+				$scope.showQuestion(question);
+			}
+			else if (!$scope.shouldShowAnswer) {
+				$scope.showAnswer();
+			}
+			else {
+				$scope.hideQuestion();
+			}
+		}
+
 		//@question {object} - An element from the list of jeopardyQuestions
 		$scope.showQuestion = function(question) {
 			$scope.selectedJeopardyQuestion = question;

@@ -38,18 +38,24 @@
                         <br />
                         File > Make a Copy...
                     </p>
-                    <p><img class="instruction-picture" src="img/HowToShare.png"/></p>
+                    <p><img class="instruction-picture" src="img/get-template.png"/></p>
                 </span>
                 <span>
                     <span class="number">2</span>
                     <h3>Add Data</h3>
-                    <p><img class="instruction-picture" src="img/HowToShare.png"/></p>
+                    <p>
+                        Make sure to leave the column headers
+                    </p>
+                    <p><img class="instruction-picture" src="img/add-data.png"/></p>
                 </span>
                 <span>
                     <span class="number">3</span>
                     <h3>Publish File</h3>
-                    <p>File > Publish to the web...</p>
-                    <p><img class="instruction-picture" src="img/HowToShare.png"/></p>
+                    <p>
+                        File > Publish to the web...
+                        <br /><br />
+                    </p>
+                    <p><img class="instruction-picture" src="img/how-to-share.png"/></p>
                 </span>            
             </div>
             <div class="banner input">
@@ -64,11 +70,17 @@
         </div>
         <div class="game-container" ng-show="fileName !== null">
             <div class="banner game-title">
-                {{fileName}} Jeopardy
+                <h2>{{fileName}} Jeopardy</h2>
             </div>
             <div class="tile-container">
-                <div ng-repeat="q in jeopardyQuestions | orderBy:['category','points']" ng-click="showQuestion(q)">
-                    {{q.category}}-{{q.points}}
+                <div ng-repeat="q in jeopardyQuestions | orderBy:['category','points']" 
+                    ng-click="stepThoughQuestionState(q)"
+                    ng-class="{'selected-question': selectedJeopardyQuestion === q, 'show-answer': selectedJeopardyQuestion === q && shouldShowAnswer}"
+                    >
+                    <span class="category">{{q.category}}</span>
+                    <span class="points">{{q.points}}</span>
+                    <span class="question">{{q.question}}</span>
+                    <span class="answer">{{q.answer}}</span>
                 </div>
             </div>
         </div>

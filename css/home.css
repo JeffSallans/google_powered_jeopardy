@@ -18,6 +18,8 @@ html {
 body {
 	background-color: #050D2B;
     background-image: url(../img/background.jpg);
+    /*Avoid weird cropping*/
+    background-size: cover;
     min-height: 100vh;
     position: relative;
     min-width: 100vh;
@@ -116,3 +118,13 @@ h6 {
     font-size: 0.8em;
 }
 
+/*Game Page*/
+
+/*Center Banner to look more title like*/
+.banner.game-title {
+
+    display: block;
+    width: 500px;
+    margin: 0 auto;
+    text-align: center;
+}

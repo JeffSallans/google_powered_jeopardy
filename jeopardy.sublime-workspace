@@ -1,0 +1,234 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"ma",
+				"max-width"
+			],
+			[
+				"mar",
+				"margin-bottom"
+			],
+			[
+				"fl",
+				"flex-container"
+			],
+			[
+				"te",
+				"text-decoration"
+			],
+			[
+				"border-co",
+				"border-color"
+			],
+			[
+				"bor",
+				"border"
+			],
+			[
+				"ba",
+				"background-color"
+			],
+			[
+				"li",
+				"link	Tag"
+			],
+			[
+				"s",
+				"style	Tag"
+			],
+			[
+				"i",
+				"important"
+			],
+			[
+				"in",
+				"inline-block"
+			],
+			[
+				"di",
+				"display"
+			],
+			[
+				"co",
+				"color"
+			],
+			[
+				"fon",
+				"font-size"
+			],
+			[
+				"cl",
+				"clear"
+			],
+			[
+				"se",
+				"section	Tag"
+			],
+			[
+				"fo",
+				"font-size"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 58.0,
+		"selected_items":
+		[
+			[
+				"packa",
+				"Preferences: Browse Packages"
+			],
+			[
+				"pack",
+				"Preferences: Browse Packages"
+			]
+		],
+		"width": 384.0
+	},
+	"console":
+	{
+		"height": 0.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/C/Program Files (x86)/Steam/SteamApps/appmanifest_239070.acf",
+		"/D/Documents/web_projects/function_junction/index.html",
+		"/D/Documents/web_projects/function_junction/css/style.css",
+		"/D/Documents/web_projects/function_junction/css/navbar.css",
+		"/D/Documents/web_projects/function_junction/css/default_tag.css",
+		"/D/Documents/web_projects/function_junction/css/header.css",
+		"/C/Program Files (x86)/Git/doc/git/html/git-rm.html",
+		"/D/Documents/web_projects/function_junction/css/simple_depend.css",
+		"/D/Documents/web_projects/function_junction/README.md",
+		"/D/Documents/web_projects/function_junction/LICENSE.txt",
+		"/D/Documents/web_projects/function_junction/location.html",
+		"/D/Documents/web_projects/function_junction/css/foundation.css",
+		"/D/Documents/web_projects/function_junction/style.css",
+		"/D/Documents/web_projects/function_junction/simple_depend.css",
+		"/D/Documents/web_projects/simple_depend_css/simple_depend.css",
+		"/D/Documents/web_projects/simple_depend_css/style.css",
+		"/D/Documents/web_projects/simple_depend_css/simple_depend.html",
+		"/D/Documents/web_projects/simple_depend_css/simple-depend.css",
+		"/D/Documents/X by 2/advance_CSS_Lightning_Talk/index.html",
+		"/D/Documents/X by 2/advance_CSS_Lightning_Talk/css/lightning.css"
+	],
+	"find":
+	{
+		"height": 34.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"-n",
+			"div",
+			"44%",
+			"h3",
+			"h2"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"70%"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 30.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"replace":
+	{
+		"height": 62.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 150.0,
+	"status_bar_visible": true
+}

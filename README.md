@@ -23,10 +23,6 @@ Expose the root folder (and subfolders) to the web.
 
 [CSS Animation Tool](http://cssanimate.com/)
 
-## Conventions
-
-[b]Simple_Depend[/b] - Strictly define position and display CSS properties from CSS attributes.  This ensures the user understands the appropriate settings that determine which CSS properties are available. 
-
 ## Contributors
  
 [Jeff Sallans](http://github.com/JeffSallans)
