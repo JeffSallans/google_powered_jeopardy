@@ -9,7 +9,7 @@ angular.module('jeopardyApp', [])
 		//Google Drive data variables
 		$scope.driveRepo = new DriveRepository($http, _);
 		$scope.fileName = null;
-		$scope.jeopardyQuestions = [];
+		$scope.jeopardyCategories = [];
 
 		//The current question to display, show null to hide the question
 		$scope.selectedJeopardyQuestion = null;
@@ -26,8 +26,10 @@ angular.module('jeopardyApp', [])
 				.then(function(file) {
 					console.log("Google Link Data: ", file);
 
-					$scope.fileName = file.filename.name;
-					$scope.jeopardyQuestions = file.data;
+					$scope.fileName = file.filename.name.replace('-Sheet1', '');
+					$scope.jeopardyCategories = _.toArray(_.groupBy(file.data, function(e) {
+						return e.category;
+					}));
 				},
 				//Fail
 				function(error) {
@@ -37,7 +39,7 @@ angular.module('jeopardyApp', [])
 		};
 
 		//Call the appropriate functions based on the question state
-		//@question {object} - An element from the list of jeopardyQuestions
+		//@question {object} - An element from the list of jeopardyCategories
 		$scope.stepThoughQuestionState = function(question) {
 
 			//Check if selected question has been set
@@ -52,7 +54,7 @@ angular.module('jeopardyApp', [])
 			}
 		}
 
-		//@question {object} - An element from the list of jeopardyQuestions
+		//@question {object} - An element from the list of jeopardyCategories
 		$scope.showQuestion = function(question) {
 			$scope.selectedJeopardyQuestion = question;
 		};
@@ -61,11 +63,23 @@ angular.module('jeopardyApp', [])
 			$scope.shouldShowAnswer = true;
 		};
 
-		//@question {object} - An element from the list of jeopardyQuestions
+		//@question {object} - An element from the list of jeopardyCategories
 		$scope.hideQuestion = function(question) {
 			$scope.selectedJeopardyQuestion = null;
 			$scope.shouldShowAnswer = false;
-			var index = $scope.jeopardyQuestions.indexOf(question);
-  			$scope.jeopardyQuestions.splice(index, 1);
+			$scope.removeQuestion(question);
 		};
+
+		//@question {object} - An element from the list of jeopardyCategories
+		$scope.removeQuestion = function(question) {
+			$scope.jeopardyCategories.forEach(function(jeopardyQuestions) {
+				var index = jeopardyQuestions.indexOf(question);
+  				
+				//only remove entry if question exists
+				if (index >= 0) {
+	  				jeopardyQuestions.splice(index, 1);
+	  			}
+			});
+		};
+
 	}]);

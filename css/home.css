@@ -126,6 +126,7 @@ h6 {
     display: block;
     width: 500px;
     margin: 0 auto;
+    margin-bottom: 30px;
     text-align: center;
 }
 
@@ -137,7 +138,10 @@ h6 {
     width: 80%;
     margin-left: 10%;
     margin-right: 10%;
-    margin-top: 5%;
+}
+
+/*Last tile container has some padding*/
+div.tile-container:last-of-type {
     margin-bottom: 5%;
 }
 
@@ -225,7 +229,7 @@ h6 {
     transition: color 2s;
 }
 
-.tile-container > .selected-question {
+.tile-container .selected-question {
     background-color: rgba(205,209,224,1);
     -webkit-box-shadow: 0px 0px 20px 10px rgba(5,13,43,1);
     -moz-box-shadow: 0px 0px 20px 10px rgba(5,13,43,1);

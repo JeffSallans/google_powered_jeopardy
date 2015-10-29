@@ -53,7 +53,8 @@
                     <h3>Publish File</h3>
                     <p>
                         File > Publish to the web...
-                        <br /><br />
+                        <br />
+                        Choose .tsv format
                     </p>
                     <p><img class="instruction-picture" src="img/how-to-share.png"/></p>
                 </span>            
@@ -72,8 +73,8 @@
             <div class="banner game-title">
                 <h2>{{fileName}} Jeopardy</h2>
             </div>
-            <div class="tile-container">
-                <div ng-repeat="q in jeopardyQuestions | orderBy:['category','points']" 
+            <div class="tile-container" ng-repeat="cat in jeopardyCategories">
+                <div ng-repeat="q in cat | orderBy:['points']" 
                     ng-click="stepThoughQuestionState(q)"
                     ng-class="{'selected-question': selectedJeopardyQuestion === q, 'show-answer': selectedJeopardyQuestion === q && shouldShowAnswer}"
                     >
