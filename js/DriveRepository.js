@@ -33,7 +33,7 @@ var DriveRepository = (function() {
 				var filename = getFilenameFromResponse(response);
 
 				//Throw execption if file is not TSV
-				if (filename.extension !== "tsv") {
+				if (!filename || filename.extension !== "tsv") {
 					throw {
 						message: "File is not in  Tab Separated Variable (TSV) format",
 						data: filename
@@ -102,6 +102,8 @@ var DriveRepository = (function() {
 
 		var headerFileDataString = response.headers("content-disposition");
 		var getFilenameAndExtensionRegex = /filename="([^\.]*)\.(\w+)"/;
+
+		if (!headerFileDataString) return null;
 
 		var headerFileData = headerFileDataString.match(getFilenameAndExtensionRegex);
 
