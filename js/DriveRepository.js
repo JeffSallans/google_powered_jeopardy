@@ -21,7 +21,7 @@ var DriveRepository = (function() {
 		var self = this;
 
 		//If https link is provided strip it out to http to avoid cross site scripting
-		link = link.replace("https", "http");	
+		link = (link || "").replace("https", "http");	
 
 		return self.$http.get(link)
 			//Success

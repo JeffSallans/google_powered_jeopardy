@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"pa",
+				"padding-left"
+			],
+			[
 				"ma",
 				"max-width"
 			],
@@ -79,15 +83,23 @@
 			"file": "index.html",
 			"settings":
 			{
-				"buffer_size": 4548,
+				"buffer_size": 4598,
 				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "js/DriveRepository.js",
+			"settings":
+			{
+				"buffer_size": 3495,
+				"line_ending": "Windows"
 			}
 		},
 		{
 			"file": "css/home.css",
 			"settings":
 			{
-				"buffer_size": 2142,
+				"buffer_size": 5382,
 				"line_ending": "Windows"
 			}
 		},
@@ -95,18 +107,15 @@
 			"file": "js/main.js",
 			"settings":
 			{
-				"buffer_size": 1768,
+				"buffer_size": 2364,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"contents": "DOCTYPE!html>\n<html>\n<link href='https://fonts.googleapis.com/css?family=Josefin+Sans|Fredoka+One' rel='stylesheet' type='text/css'>\n<link type=\"text/css\" rel=\"stylesheet\" href=\"bestell.css\">\n    <head>\n        <title>Bootstrap your life</title>\n    </head>\n    <body>\n        <div class=\"header\">\n            <div class=\"container\"> \n                <h3>Pick yourself up by your</h3>\n                <h1>bootstraps</h1>\n            </div>\n        </div>\n        <div class=\"body\">\n            <div class=\"container\">\n                <ul class=\"menu\">\n                    <li class=\"earn\">\n                        <div class=\"button\">    \n                            <h2>Earn</h2>\n                        </div>\n                        <div class=\"links\"> \n                            <a href=\"https://get.uber.com/drive/\">Drive for Uber</a>\n                            <a href=\"https://www.lyft.com/drivers\">Drive for Lyft</a>\n                            <a href=\"http://www.freelance.com/en/\">Freelance on freelance.com</a>\n                            <a href=\"https://www.shopify.com/\">Start a Shopify Store</a>\n                            <a href=\"https://postmates.com/apply\">Deliver for Postmates</a>\n                        </div>\n                    </li>\n                    <li class=\"learn\">\n                        <div class=\"button\">\n                            <h2>Learn</h2>\n                        </div>\n                        <div class=\"links\">\n                            <a href=\"https://www.coursera.org\">Take a Coursera Course</a>\n                            <a href=\"https://www.khanacademy.org/\">Study on Khan Academy</a>\n                            <a href=\"https://www.skillshare.com/\">Learn a skill on Skillshare</a>\n                            <a href=\"http://creativelive.com/\">Get creative on Creative Live</a>\n                        </div>\n                    </li>\n                </ul>\n            </div>\n        </div>\n    </body>\n</html>",
-			"file": "test.html",
-			"file_size": 2021,
-			"file_write_time": 130904740848907635,
+			"file": "README.md",
 			"settings":
 			{
-				"buffer_size": 1976,
+				"buffer_size": 760,
 				"line_ending": "Windows"
 			}
 		}
@@ -143,8 +152,11 @@
 	},
 	"file_history":
 	[
-		"/D/Documents/web_projects/jeopardy/bestell.css",
+		"/D/Documents/web_projects/jeopardy/index.html",
+		"/D/Documents/web_projects/jeopardy/css/home.css",
+		"/D/Documents/web_projects/jeopardy/js/main.js",
 		"/D/Documents/web_projects/jeopardy/test.html",
+		"/D/Documents/web_projects/jeopardy/bestell.css",
 		"/C/Program Files (x86)/Steam/SteamApps/appmanifest_239070.acf",
 		"/D/Documents/web_projects/function_junction/index.html",
 		"/D/Documents/web_projects/function_junction/css/style.css",
@@ -182,6 +194,8 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"}\n",
+			"\n        ",
 			"-n",
 			"div",
 			"44%",
@@ -205,6 +219,7 @@
 	"groups":
 	[
 		{
+			"selected": 2,
 			"sheets":
 			[
 				{
@@ -212,15 +227,15 @@
 					"file": "index.html",
 					"settings":
 					{
-						"buffer_size": 4548,
+						"buffer_size": 4598,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								3588,
-								3588
+								300,
+								300
 							]
 						],
 						"settings":
@@ -230,26 +245,53 @@
 							"translate_tabs_to_spaces": true,
 							"word_wrap": false
 						},
-						"translation.x": 123.0,
-						"translation.y": 896.0,
+						"translation.x": 0.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "css/home.css",
+					"file": "js/DriveRepository.js",
 					"settings":
 					{
-						"buffer_size": 2142,
+						"buffer_size": 3495,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2035,
-								2035
+								2568,
+								2568
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 11.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "css/home.css",
+					"settings":
+					{
+						"buffer_size": 5382,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4949,
+								4949
 							]
 						],
 						"settings":
@@ -259,25 +301,25 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 1457.0,
+						"translation.y": 3512.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
-					"buffer": 2,
+					"buffer": 3,
 					"file": "js/main.js",
 					"settings":
 					{
-						"buffer_size": 1768,
+						"buffer_size": 2364,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1289,
-								1289
+								2344,
+								2344
 							]
 						],
 						"settings":
@@ -286,32 +328,30 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 547.0,
+						"translation.y": 798.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
-					"buffer": 3,
-					"file": "test.html",
+					"buffer": 4,
+					"file": "README.md",
 					"settings":
 					{
-						"buffer_size": 1976,
+						"buffer_size": 760,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								568,
+								568
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
+							"syntax": "Packages/Markdown/Markdown.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -378,6 +418,6 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 150.0,
+	"side_bar_width": 228.0,
 	"status_bar_visible": true
 }
