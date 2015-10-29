@@ -21,8 +21,6 @@ Expose the root folder (and subfolders) to the web.
 
 [CSS Matic Tools](http://www.cssmatic.com/gradient-generator)
 
-[CSS Animation Tool](http://cssanimate.com/)
-
 ## Contributors
  
 [Jeff Sallans](http://github.com/JeffSallans)
