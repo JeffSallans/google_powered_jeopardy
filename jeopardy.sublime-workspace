@@ -75,6 +75,41 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "index.html",
+			"settings":
+			{
+				"buffer_size": 4548,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "css/home.css",
+			"settings":
+			{
+				"buffer_size": 2142,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "js/main.js",
+			"settings":
+			{
+				"buffer_size": 1768,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "DOCTYPE!html>\n<html>\n<link href='https://fonts.googleapis.com/css?family=Josefin+Sans|Fredoka+One' rel='stylesheet' type='text/css'>\n<link type=\"text/css\" rel=\"stylesheet\" href=\"bestell.css\">\n    <head>\n        <title>Bootstrap your life</title>\n    </head>\n    <body>\n        <div class=\"header\">\n            <div class=\"container\"> \n                <h3>Pick yourself up by your</h3>\n                <h1>bootstraps</h1>\n            </div>\n        </div>\n        <div class=\"body\">\n            <div class=\"container\">\n                <ul class=\"menu\">\n                    <li class=\"earn\">\n                        <div class=\"button\">    \n                            <h2>Earn</h2>\n                        </div>\n                        <div class=\"links\"> \n                            <a href=\"https://get.uber.com/drive/\">Drive for Uber</a>\n                            <a href=\"https://www.lyft.com/drivers\">Drive for Lyft</a>\n                            <a href=\"http://www.freelance.com/en/\">Freelance on freelance.com</a>\n                            <a href=\"https://www.shopify.com/\">Start a Shopify Store</a>\n                            <a href=\"https://postmates.com/apply\">Deliver for Postmates</a>\n                        </div>\n                    </li>\n                    <li class=\"learn\">\n                        <div class=\"button\">\n                            <h2>Learn</h2>\n                        </div>\n                        <div class=\"links\">\n                            <a href=\"https://www.coursera.org\">Take a Coursera Course</a>\n                            <a href=\"https://www.khanacademy.org/\">Study on Khan Academy</a>\n                            <a href=\"https://www.skillshare.com/\">Learn a skill on Skillshare</a>\n                            <a href=\"http://creativelive.com/\">Get creative on Creative Live</a>\n                        </div>\n                    </li>\n                </ul>\n            </div>\n        </div>\n    </body>\n</html>",
+			"file": "test.html",
+			"file_size": 2021,
+			"file_write_time": 130904740848907635,
+			"settings":
+			{
+				"buffer_size": 1976,
+				"line_ending": "Windows"
+			}
+		}
 	],
 	"build_system": "",
 	"command_palette":
@@ -108,6 +143,8 @@
 	},
 	"file_history":
 	[
+		"/D/Documents/web_projects/jeopardy/bestell.css",
+		"/D/Documents/web_projects/jeopardy/test.html",
 		"/C/Program Files (x86)/Steam/SteamApps/appmanifest_239070.acf",
 		"/D/Documents/web_projects/function_junction/index.html",
 		"/D/Documents/web_projects/function_junction/css/style.css",
@@ -170,6 +207,118 @@
 		{
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "index.html",
+					"settings":
+					{
+						"buffer_size": 4548,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3588,
+								3588
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true,
+							"word_wrap": false
+						},
+						"translation.x": 123.0,
+						"translation.y": 896.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "css/home.css",
+					"settings":
+					{
+						"buffer_size": 2142,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2035,
+								2035
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1457.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "js/main.js",
+					"settings":
+					{
+						"buffer_size": 1768,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1289,
+								1289
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 547.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "test.html",
+					"settings":
+					{
+						"buffer_size": 1976,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
 			]
 		}
 	],

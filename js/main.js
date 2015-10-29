@@ -48,7 +48,7 @@ angular.module('jeopardyApp', [])
 				$scope.showAnswer();
 			}
 			else {
-				$scope.hideQuestion();
+				$scope.hideQuestion(question);
 			}
 		}
 
@@ -61,8 +61,11 @@ angular.module('jeopardyApp', [])
 			$scope.shouldShowAnswer = true;
 		};
 
-		$scope.hideQuestion = function() {
+		//@question {object} - An element from the list of jeopardyQuestions
+		$scope.hideQuestion = function(question) {
 			$scope.selectedJeopardyQuestion = null;
 			$scope.shouldShowAnswer = false;
+			var index = $scope.jeopardyQuestions.indexOf(question);
+  			$scope.jeopardyQuestions.splice(index, 1);
 		};
 	}]);

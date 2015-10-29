@@ -84,7 +84,7 @@ var DriveRepository = (function() {
 			//Match up the schema name with the row value
 			tsvSchema.forEach(function(notUsedElement, index) {
 
-				var schemaElementName = tsvSchema[index].toLowerCase();
+				var schemaElementName = tsvSchema[index].trim().toLowerCase();
 				rowResult[schemaElementName] = row[index];
 			});
 
