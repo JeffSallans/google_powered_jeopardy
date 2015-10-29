@@ -16,13 +16,10 @@ html {
 }
 
 body {
-	background-color: #050D2B;
+    background-color: #050D2B;
     background-image: url(../img/background.jpg);
-    /*Avoid weird cropping*/
-    background-size: cover;
     min-height: 100vh;
     position: relative;
-    min-width: 100vh;
     overflow-x: hidden;
 }
 
@@ -95,7 +92,6 @@ h6 {
 }
 
 .banner.input {
-    margin-top`: 100px;
     margin-top: 40px;
     width: 50%;
     min-width: 400px;
@@ -142,7 +138,7 @@ h6 {
 
 /*Last tile container has some padding*/
 div.tile-container:last-of-type {
-    margin-bottom: 5%;
+    padding-bottom: 50px;
 }
 
 /*Give fixed width and height like a tile*/
@@ -234,15 +230,56 @@ div.tile-container:last-of-type {
     -webkit-box-shadow: 0px 0px 20px 10px rgba(5,13,43,1);
     -moz-box-shadow: 0px 0px 20px 10px rgba(5,13,43,1);
     box-shadow: 0px 0px 20px 10px rgba(5,13,43,1);
-    position: absolute;
+    
+    /*Display as a popup in front of other things*/
+    position: fixed;
     z-index: 99;
     display: block;
-    width: 300px;
-    height: 300px;
+    width: 70%;
+    height: 70%;
+
+    /*Center logic*/
     top: 0px;
     left: 0px;
     right: 0px;
     bottom: 0px;
     margin: auto;
     transition: background-color .3s, box-shadow .3s, width 1s, height 1s, top 1s, left 1s, right 1s, bottom 1s, margin 1s;
+}
+
+@media screen and (max-width: 700px) {
+
+    /*Duplicating to increase selectivity of 
+    classes to override defaults*/
+
+    .banner.banner {
+        width: 100%;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .banner.banner.instructions {
+        margin-left: 0px;
+        padding-left: 40px;
+    }
+
+    .banner.banner.input {
+        margin-top: 40px;
+        width: 100%;
+        min-width: 200px;
+    }
+
+    .banner.banner.game-title {
+        width: 100%;
+    }
+
+    .input.input input {
+        width: 80%;
+    }
+
+    .tile-container {
+        width: 100%;
+        margin-left: 0px;
+        margin-right: 0px;
+    }
 }
