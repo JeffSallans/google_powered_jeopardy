@@ -1,23 +1,23 @@
 "use strict";
-var DriveRepository = (function() {
+var GoogleSheetsRepository = (function() {
 
-	//Create an object to manage getting data from google drive
+	//Create an object to manage getting data from google drive spreadsheets
 	//@$http {angular service} - the $http angular service
 	//@_ {lodash} - the javascript library
-	var _DriveRepository = function($http, _) {
+	var _GoogleSheetsRepository = function($http, _) {
 		var self = this;
 
 		self.$http = $http;
 		self._ = _;
 	};
 
-	//@link {string} - url of published google drive in tab separated variable (TSV) format
+	//@link {string} - url of published google drive spreadsheets in tab separated variable (TSV) format
 	//@returns {promise} - returns a promise that resolves to an object that contains the following structure
 	//  @filename {object} - File object with the following structure
 	//	  @name {string} - Name of the file. testDocument.txt it would be testDocument
 	//    @extension {string} - File type. testDocument.txt it would be txt
 	//  @data {object} - data from the document
-	_DriveRepository.prototype.getFile = function(link) {
+	_GoogleSheetsRepository.prototype.getFile = function(link) {
 		var self = this;
 
 		//If https link is provided strip it out to http to avoid cross site scripting
@@ -60,7 +60,17 @@ var DriveRepository = (function() {
 	//   tab deliminated columns
 	//   new line deliminated rows
 	//   the first row defines the schema
-	//@returns {object} - Then schema of the object is all lower case
+	//@returns {Array of Objects} - Array of objects with the schema of the first row (all lowercase)
+	//example: 
+	// name 	details 	date
+	// John 	example text 	12/27/2015
+	// 
+	// ->
+	// {
+	//	name: 'John',
+	//	details: 'example text',
+	//	date: '12/27/2015'
+	// }
 	var convertTsvToObject = function(tsvString) {
 
 		//Separate string by new line
@@ -118,5 +128,5 @@ var DriveRepository = (function() {
 		};
 	};
 
-	return _DriveRepository;
+	return _GoogleSheetsRepository;
 })();

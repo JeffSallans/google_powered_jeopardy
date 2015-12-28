@@ -80,42 +80,10 @@
 	"buffers":
 	[
 		{
-			"file": "index.html",
-			"settings":
-			{
-				"buffer_size": 4598,
-				"line_ending": "Unix"
-			}
-		},
-		{
 			"file": "js/DriveRepository.js",
 			"settings":
 			{
-				"buffer_size": 3495,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "css/home.css",
-			"settings":
-			{
-				"buffer_size": 5382,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "js/main.js",
-			"settings":
-			{
-				"buffer_size": 2364,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "README.md",
-			"settings":
-			{
-				"buffer_size": 760,
+				"buffer_size": 3811,
 				"line_ending": "Windows"
 			}
 		}
@@ -153,8 +121,11 @@
 	"file_history":
 	[
 		"/D/Documents/web_projects/jeopardy/index.html",
+		"/D/Documents/web_projects/jeopardy/js/DriveRepository.js",
+		"/C/Program Files (x86)/Steam/config/config.vdf",
 		"/D/Documents/web_projects/jeopardy/css/home.css",
 		"/D/Documents/web_projects/jeopardy/js/main.js",
+		"/D/Documents/web_projects/jeopardy/README.md",
 		"/D/Documents/web_projects/jeopardy/test.html",
 		"/D/Documents/web_projects/jeopardy/bestell.css",
 		"/C/Program Files (x86)/Steam/SteamApps/appmanifest_239070.acf",
@@ -191,9 +162,12 @@
 	},
 	"find_state":
 	{
-		"case_sensitive": false,
+		"case_sensitive": true,
 		"find_history":
 		[
+			"drive",
+			"DriveRepository",
+			"AttemptingInit",
 			"}\n",
 			"\n        ",
 			"-n",
@@ -208,6 +182,7 @@
 		"regex": false,
 		"replace_history":
 		[
+			"GoogleSheetsRepository",
 			"70%"
 		],
 		"reverse": false,
@@ -219,107 +194,23 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 0,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "index.html",
-					"settings":
-					{
-						"buffer_size": 4598,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								300,
-								300
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true,
-							"word_wrap": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 1,
 					"file": "js/DriveRepository.js",
 					"settings":
 					{
-						"buffer_size": 3495,
+						"buffer_size": 3811,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2568,
-								2568
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 11.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "css/home.css",
-					"settings":
-					{
-						"buffer_size": 5382,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								4949,
-								4949
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/CSS/CSS.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 3512.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "js/main.js",
-					"settings":
-					{
-						"buffer_size": 2364,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2344,
-								2344
+								2135,
+								2135
 							]
 						],
 						"settings":
@@ -328,33 +219,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 798.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "README.md",
-					"settings":
-					{
-						"buffer_size": 760,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								568,
-								568
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Markdown/Markdown.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 1666.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"

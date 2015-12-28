@@ -7,7 +7,7 @@ angular.module('jeopardyApp', [])
 		$scope.year = date.getFullYear()
 
 		//Google Drive data variables
-		$scope.driveRepo = new DriveRepository($http, _);
+		$scope.driveRepo = new GoogleSheetsRepository($http, _);
 		$scope.fileName = null;
 		$scope.jeopardyCategories = [];
 
